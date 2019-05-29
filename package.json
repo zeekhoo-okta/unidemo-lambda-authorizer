@@ -1,0 +1,26 @@
+{
+  "name": "unidemo-okta-verifier",
+  "version": "1.0.0",
+  "description": "Custom Lambda Authorizer that verifies any jwt minted for Unified Demo Environment",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/lambda-local --timeout 300 -l index.js -h handler -e test/event.json",
+    "zip": "mkdir dist && rm -f dist/unidemo-okta-verifier.zip ; zip dist/unidemo-okta-verifier.zip -r *.js *.json node_modules/"
+  },
+  "author": "zeekhoo-okta",
+  "license": "ISC",
+  "dependencies": {
+    "@okta/jwt-verifier": "0.0.15",
+    "atob": "^2.1.2",
+    "aws-auth-policy": "^0.1.0",
+    "aws-sdk": "^2.459.0"
+  },
+  "devDependencies": {
+    "lambda-local": "^1.1.0",
+    "grunt": "^1.0.1",
+    "grunt-aws": "^0.6.1",
+    "grunt-aws-lambda": "^0.13.0",
+    "grunt-env": "^0.4.4",
+    "load-grunt-tasks": "^3.4.0"
+  }
+}
