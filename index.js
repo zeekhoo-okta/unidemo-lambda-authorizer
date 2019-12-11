@@ -44,6 +44,10 @@ exports.handler = function(event, context) {
         const oktaOrg = orgUrl.split('https://')[1];
         ctx.oktaOrg = JSON.stringify(oktaOrg);
 
+        builtPolicy.context = ctx;
+        
+        console.log('---builtPolicy---');
+        console.log(builtPolicy);
         return context.succeed(builtPolicy);
     })
     .catch((err) => {

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/lambda-local --timeout 300 -l index.js -h handler -e test/event.json",
-    "zip": "mkdir dist && rm -f dist/unidemo-okta-verifier.zip ; zip dist/unidemo-okta-verifier.zip -r *.js *.json node_modules/"
+    "zip": "mkdir dist && rm -f dist/unidemo-lambda-authorizer.zip ; zip dist/unidemo-lambda-authorizer.zip -r *.js *.json node_modules/"
   },
   "author": "zeekhoo-okta",
   "license": "ISC",
